@@ -9,7 +9,7 @@ Desarrollo basado en los criterios del Challengs Alura Consumo de api Gutendex, 
 - 🌟 CRUD LIBROS
 - 🌟 MANEJO DATOS DTOS
 - 🌟 JPA
-- 🌟 MYSQL
+- 🌟 POSTGRESQL
 
 # 🌟 Menu 🌟
 
