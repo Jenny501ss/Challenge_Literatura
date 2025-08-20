@@ -1,38 +1,109 @@
-# 💻 Challenge_Literatura
+# 📚 Challenge Literalura - Oracle Next Education & Alura Latam
 
-Desarrollo basado en los criterios del Challengs Alura Consumo de api Gutendex, donde se optiene gran serie de datos sobre libros, aqui podemos ver menjo de json del api al desarrollo, mapeo de entidades, Jpa creacion base de datos. registro de informacion DB, consumo de esta en formata requerido, algunas de las funciones como traer libros almacenado, autores, top10 libros mas descargados.
+Este proyecto corresponde al **Challenge Literalura**, parte de la formación en **Spring Boot** del programa **Oracle Next Education (ONE)** en conjunto con **Alura Latam**.
 
+El desafío consiste en implementar una aplicación que consuma la API de **Gutendex**, permitiendo gestionar un catálogo de libros y autores, almacenándolos en una base de datos relacional y ofreciendo funcionalidades de consulta.
 
-## 🌟 FUNCIONES DEL DESARROLLO 🌟
+---
 
-- 🌟 Consumo api GUTENDEX
-- 🌟 CRUD LIBROS
-- 🌟 MANEJO DATOS DTOS
-- 🌟 JPA
-- 🌟 POSTGRESQL
+## 🚀 Tecnologías utilizadas
 
-# 🌟 Menu 🌟
+- **Java 17**
+- **Spring Boot 3**
+- **Spring Data JPA**
+- **Hibernate**
+- **PostgreSQL** (o MySQL)
+- **Gutendex API** (https://gutendex.com/books/)
+- **Maven**
+- **IntelliJ IDEA / Eclipse**
 
+---
 
-# 🌟 Manejo Informacion almacenada en DB ya consumida de la API-Gutendex 🌟
+## 📌 Funcionalidades principales
 
+✔️ Buscar libros por título en la API Gutendex  
+✔️ Guardar libros y autores en la base de datos  
+✔️ Listar libros registrados  
+✔️ Listar autores registrados  
+✔️ Consultar autores vivos en un año específico  
+✔️ Consultar libros por idioma  
+✔️ Evitar duplicados en el registro de libros/autores  
 
+---
 
-# 🌟 Top Libros mas descargados 🌟
+## 📂 Estructura del proyecto
 
+```
+src/
+ ├── main/
+ │   ├── java/com/literalura/
+ │   │   ├── controller/   # Controladores REST
+ │   │   ├── model/        # Entidades JPA
+ │   │   ├── repository/   # Repositorios
+ │   │   ├── service/      # Lógica de negocio
+ │   │   └── LiteraluraApplication.java
+ │   └── resources/
+ │       ├── application.properties
+ │       └── data.sql / schema.sql
+ └── test/
+```
 
-# 🌟 Tablas DB 🌟
+---
 
+## ⚙️ Configuración
 
-## 🌟 IDES/ INSTALACIÓN O REQUERIMIENTOS🌟
-- MAVEN
-- LIBRERIAS SPRING - JPA - POSTGRESDB
-- INTELIJ IDEA
-- P0
+En `application.properties` debes configurar la conexión a tu base de datos:
 
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/literalura
+spring.datasource.username=postgres
+spring.datasource.password=tu_contraseña
 
-## 🌟 Tecnologías usadas 🌟
-| Tecnología | Versión | Descripción                                                                     |
-|------------|---------|---------------------------------------------------------------------------------|
-|SPRINGBOOT       | 3.1.5       | Lenguaje para la logica y consumo api. |
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
 
+---
+
+## ▶️ Ejecución
+
+1. Clonar el repositorio  
+2. Configurar la base de datos en `application.properties`  
+3. Ejecutar la aplicación con:  
+
+```bash
+mvn spring-boot:run
+```
+
+4. Usar los endpoints expuestos en **Postman** o cualquier cliente REST.
+
+---
+
+## 🧪 Ejemplos de consultas
+
+- Buscar libros: `/api/libros?titulo=Don Quijote`  
+- Listar autores vivos en 1900: `/api/autores?vivosEn=1900`  
+- Listar libros por idioma: `/api/libros?idioma=es`  
+
+---
+
+## 🎯 Objetivo del Challenge
+
+Este reto busca aplicar conocimientos de:
+
+- **Consumo de APIs REST**
+- **Persistencia de datos con Spring Data JPA**
+- **Modelado de entidades**
+- **Buenas prácticas en Spring Boot**
+
+---
+
+## 👩‍💻 Autor
+
+**Jenny Joseline Mamani Choque**  
+📧 [yenny501ss@gmail.com](mailto:yenny501ss@gmail.com)  
+💼 [LinkedIn](https://www.linkedin.com/in/jenny-joseline-mamani-choque-07963593)
+
+---
+
+✨ Este proyecto forma parte del programa **Oracle Next Education (ONE) + Alura Latam**.  
